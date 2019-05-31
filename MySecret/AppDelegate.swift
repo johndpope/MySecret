@@ -12,9 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var appCoordinator:AppCoordinator?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let appCoordinator = AppCoordinator(window: window)
+        window.backgroundColor = .white
+        appCoordinator.start()
+        
+        self.window = window
+        self.appCoordinator = appCoordinator
+        
+        
         // Override point for customization after application launch.
         return true
     }

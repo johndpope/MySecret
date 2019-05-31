@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DetailPhotoCell" customModule="MySecret" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="224" height="184"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="224" height="184"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0c-VT-eH1">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="184"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbA-Ks-wsL" customClass="ImageScrollView" customModule="MySecret" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="184"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IbA-Ks-wsL" secondAttribute="trailing" id="4BY-GZ-ugo"/>
+                            <constraint firstItem="IbA-Ks-wsL" firstAttribute="leading" secondItem="K0c-VT-eH1" secondAttribute="leading" id="LVb-KT-4IG"/>
+                            <constraint firstAttribute="bottom" secondItem="IbA-Ks-wsL" secondAttribute="bottom" id="ZbH-zz-C27"/>
+                            <constraint firstItem="IbA-Ks-wsL" firstAttribute="top" secondItem="K0c-VT-eH1" secondAttribute="top" id="lHb-mf-VbY"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GL-Po-2e9">
+                        <rect key="frame" x="180" y="0.0" width="44" height="184"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="cvs-To-PG3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7GL-Po-2e9" secondAttribute="trailing" id="1Ir-Ln-hjD"/>
+                <constraint firstItem="K0c-VT-eH1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FT6-2W-KwR"/>
+                <constraint firstAttribute="bottom" secondItem="7GL-Po-2e9" secondAttribute="bottom" id="MjC-HI-eZH"/>
+                <constraint firstItem="7GL-Po-2e9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Oo0-p5-2Ih"/>
+                <constraint firstItem="K0c-VT-eH1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RNT-D1-6F9"/>
+                <constraint firstItem="7GL-Po-2e9" firstAttribute="leading" secondItem="K0c-VT-eH1" secondAttribute="trailing" id="fbG-aM-MtJ"/>
+                <constraint firstAttribute="bottom" secondItem="K0c-VT-eH1" secondAttribute="bottom" id="z9S-W4-Veq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="224" height="184"/>
+            <connections>
+                <outlet property="parallexView" destination="K0c-VT-eH1" id="Gx2-0g-7pI"/>
+                <outlet property="scrollView" destination="IbA-Ks-wsL" id="kgF-Md-zxC"/>
+            </connections>
+            <point key="canvasLocation" x="209.59999999999999" y="189.80509745127438"/>
+        </collectionViewCell>
+    </objects>
+</document>

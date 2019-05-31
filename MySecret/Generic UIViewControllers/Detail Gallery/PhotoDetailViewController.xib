@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController" customModule="MySecret" customModuleProvider="target">
+            <connections>
+                <outlet property="centerBtn" destination="r9Z-4x-p7U" id="wZR-Pn-vtu"/>
+                <outlet property="detailPhotoCollection" destination="C3z-Fc-vBh" id="ZaA-Av-kRg"/>
+                <outlet property="dummyImageView" destination="3kf-7t-jdP" id="hrQ-q0-rDd"/>
+                <outlet property="functionToolBar" destination="Dmh-Dw-I1f" id="hSE-fT-YvP"/>
+                <outlet property="leftBtn" destination="rxq-JE-hPl" id="3yX-On-kIM"/>
+                <outlet property="rightBtn" destination="q9u-10-b1T" id="E57-Nd-Ln8"/>
+                <outlet property="tabBarBottomConstrain" destination="ymZ-xF-6Qn" id="WRR-ZD-dos"/>
+                <outlet property="toolbarBackground" destination="Xhm-G0-SSz" id="9pi-C7-sUy"/>
+                <outlet property="toolbarBackgroundHeightConstrain" destination="Wtt-0F-n2c" id="c4e-9P-r55"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="C3z-Fc-vBh">
+                    <rect key="frame" x="0.0" y="0.0" width="419" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fhw-Qb-NSm">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-7t-jdP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhm-G0-SSz">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Wtt-0F-n2c"/>
+                    </constraints>
+                    <items/>
+                </toolbar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmh-Dw-I1f">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="action" id="rxq-JE-hPl">
+                            <connections>
+                                <action selector="leftBtn:" destination="-1" id="dk0-UY-VSZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="3ds-9m-Fca"/>
+                        <barButtonItem image="LikeToolBar" id="r9Z-4x-p7U">
+                            <connections>
+                                <action selector="centerBtn:" destination="-1" id="D6X-Nf-6mX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="aI1-7C-UIc"/>
+                        <barButtonItem systemItem="trash" id="q9u-10-b1T">
+                            <connections>
+                                <action selector="rightBtn:" destination="-1" id="KHW-Kh-Re7"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3kf-7t-jdP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6TP-2u-JR6"/>
+                <constraint firstItem="C3z-Fc-vBh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BLs-vp-sOV"/>
+                <constraint firstItem="Dmh-Dw-I1f" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Dvl-4y-MxN"/>
+                <constraint firstItem="Xhm-G0-SSz" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="IoR-Am-y6h"/>
+                <constraint firstItem="Xhm-G0-SSz" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="NDQ-oS-D8q"/>
+                <constraint firstItem="3kf-7t-jdP" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="Sfq-fE-jt7"/>
+                <constraint firstItem="C3z-Fc-vBh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ssb-au-uDI"/>
+                <constraint firstItem="Xhm-G0-SSz" firstAttribute="leading" secondItem="C3z-Fc-vBh" secondAttribute="leading" id="UFU-wc-bfM"/>
+                <constraint firstItem="3kf-7t-jdP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VI5-OC-aZb"/>
+                <constraint firstItem="C3z-Fc-vBh" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="ovn-f7-LLL"/>
+                <constraint firstItem="3kf-7t-jdP" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="te4-7f-Fbn"/>
+                <constraint firstItem="Dmh-Dw-I1f" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="ymZ-xF-6Qn"/>
+                <constraint firstItem="Dmh-Dw-I1f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zRw-Jr-aX0"/>
+                <constraint firstItem="C3z-Fc-vBh" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" constant="44" id="zjI-dP-2vr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="109.29535232383809"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LikeToolBar" width="25" height="25"/>
+    </resources>
+</document>

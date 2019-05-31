@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AlbumCollectionViewCell" customModule="MySecret" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="136" height="192"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="136" height="192"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b5t-Qt-CVw">
+                        <rect key="frame" x="10" y="10" width="126" height="126"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="b5t-Qt-CVw" secondAttribute="height" multiplier="1:1" id="g5z-bt-FMu"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IX-TW-QNf">
+                        <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.1115614444" blue="0.070059302609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="cancelDidPress:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jjZ-kN-pSl"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Est-f9-6Bw">
+                        <rect key="frame" x="10" y="144" width="126" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Fa6-ZH-Emg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="79" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khE-XP-fyf">
+                        <rect key="frame" x="10" y="162" width="126" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="vzZ-fb-Kaz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Est-f9-6Bw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="24b-t0-YUi"/>
+                <constraint firstAttribute="trailing" secondItem="Est-f9-6Bw" secondAttribute="trailing" id="4qA-TJ-pr1"/>
+                <constraint firstItem="khE-XP-fyf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="WyY-UZ-en4"/>
+                <constraint firstItem="Est-f9-6Bw" firstAttribute="top" secondItem="b5t-Qt-CVw" secondAttribute="bottom" constant="8" id="Y0C-pt-qF1"/>
+                <constraint firstItem="b5t-Qt-CVw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="bvS-AZ-Pi8"/>
+                <constraint firstAttribute="trailing" secondItem="b5t-Qt-CVw" secondAttribute="trailing" id="euh-YL-bQj"/>
+                <constraint firstItem="b5t-Qt-CVw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="pHQ-Rw-MsQ"/>
+                <constraint firstItem="khE-XP-fyf" firstAttribute="top" secondItem="Est-f9-6Bw" secondAttribute="bottom" id="uhM-Ri-2Pl"/>
+                <constraint firstAttribute="trailing" secondItem="khE-XP-fyf" secondAttribute="trailing" id="xcw-Jd-XAL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="albumCover" destination="b5t-Qt-CVw" id="hhh-AU-h3J"/>
+                <outlet property="albumPhotosCount" destination="khE-XP-fyf" id="HJZ-NN-8es"/>
+                <outlet property="albumTitle" destination="Est-f9-6Bw" id="xiK-S0-nmE"/>
+                <outlet property="cancelBtn" destination="7IX-TW-QNf" id="9l0-HW-v6U"/>
+            </connections>
+            <point key="canvasLocation" x="97.599999999999994" y="104.34782608695653"/>
+        </collectionViewCell>
+    </objects>
+</document>

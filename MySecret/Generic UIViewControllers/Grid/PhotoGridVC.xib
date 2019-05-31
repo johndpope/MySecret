@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoGridVC" customModule="MySecret" customModuleProvider="target">
+            <connections>
+                <outlet property="backGroundToolBar" destination="ch4-Sg-Kef" id="sDs-1c-byQ"/>
+                <outlet property="centerBtn" destination="b2W-T3-rXr" id="oNj-jy-IaZ"/>
+                <outlet property="functionToolBar" destination="35H-Ps-6U2" id="hSr-CY-Fph"/>
+                <outlet property="leftBtn" destination="cnN-id-d4I" id="81f-Qm-pl0"/>
+                <outlet property="photoGrid" destination="mwd-JP-15i" id="EBX-3N-fVG"/>
+                <outlet property="rightBtn" destination="Uwt-hQ-ub6" id="eau-0c-n31"/>
+                <outlet property="testcv" destination="mwd-JP-15i" id="U8o-Op-Et8"/>
+                <outlet property="toolBackgroundHeightConstrain" destination="UbN-HV-Kk3" id="2Qz-1T-rHM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-JP-15i">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0gb-gh-8xl">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-Sg-Kef">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="UbN-HV-Kk3"/>
+                    </constraints>
+                    <items/>
+                </toolbar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35H-Ps-6U2">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="action" id="cnN-id-d4I">
+                            <connections>
+                                <action selector="leftBtn:" destination="-1" id="aoz-vw-pLD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="mj2-CD-wKU"/>
+                        <barButtonItem title="Add To" id="b2W-T3-rXr">
+                            <connections>
+                                <action selector="centerBtn:" destination="-1" id="N6t-cq-R9b"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="PtX-HJ-6yN"/>
+                        <barButtonItem systemItem="trash" id="Uwt-hQ-ub6">
+                            <connections>
+                                <action selector="rightBtn:" destination="-1" id="aRl-Ve-rGa"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ch4-Sg-Kef" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="6OA-IA-7u6"/>
+                <constraint firstItem="ch4-Sg-Kef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AUp-AC-iO1"/>
+                <constraint firstItem="35H-Ps-6U2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nqq-R1-irk"/>
+                <constraint firstItem="mwd-JP-15i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P8Q-qG-Btb"/>
+                <constraint firstItem="ch4-Sg-Kef" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Wac-Sk-Gj9"/>
+                <constraint firstItem="mwd-JP-15i" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="YKw-cE-dZr"/>
+                <constraint firstItem="mwd-JP-15i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iPH-ar-sI4"/>
+                <constraint firstItem="35H-Ps-6U2" firstAttribute="bottom" secondItem="mwd-JP-15i" secondAttribute="bottom" id="jdz-cM-Xyk"/>
+                <constraint firstItem="mwd-JP-15i" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="reb-Q8-7ym"/>
+                <constraint firstItem="35H-Ps-6U2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uHb-mq-CJb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154.27286356821591"/>
+        </view>
+    </objects>
+</document>
