@@ -1,0 +1,35 @@
+PODS:
+  - DifferenceKit (1.1.2):
+    - DifferenceKit/Core (= 1.1.2)
+    - DifferenceKit/UIKitExtension (= 1.1.2)
+  - DifferenceKit/Core (1.1.2)
+  - DifferenceKit/UIKitExtension (1.1.2):
+    - DifferenceKit/Core
+  - Realm (3.15.0):
+    - Realm/Headers (= 3.15.0)
+  - Realm/Headers (3.15.0)
+  - RealmSwift (3.15.0):
+    - Realm (= 3.15.0)
+  - RNCryptor (5.1.0)
+
+DEPENDENCIES:
+  - DifferenceKit
+  - RealmSwift
+  - RNCryptor (~> 5.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DifferenceKit
+    - Realm
+    - RealmSwift
+    - RNCryptor
+
+SPEC CHECKSUMS:
+  DifferenceKit: 3a1cff9ac9a9cdf2a3f205671067797e83c3f066
+  Realm: 9b834e1be6062f544805252c812348872dc5d4ed
+  RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
+  RNCryptor: a369134686cd2ad391323cc856b62e591193ba79
+
+PODFILE CHECKSUM: 2f5f2c734efb742e626b2024d9d21d7bac2a4eb0
+
+COCOAPODS: 1.6.2

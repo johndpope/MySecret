@@ -75,4 +75,6 @@ class AlbumFlowLayout: UICollectionViewFlowLayout {
         print("width intiated \(width)")
 
     }
+    
+
 }
